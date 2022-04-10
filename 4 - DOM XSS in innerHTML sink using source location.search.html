@@ -1,0 +1,20 @@
+<section class="search">
+                        <form action="" method="GET">
+                            <input type="text" placeholder="Search the blog..." name="search">
+                            <button type="submit" class="button">Search</button>
+                        </form>
+                    </section>
+
+                    <section class="blog-header">
+                        <h1><span>0 search results for '</span><span id="searchMessage"></svg></span><span>'</span></h1>
+                        <script>
+                            function doSearchQuery(query) {
+                                document.getElementById('searchMessage').innerHTML = query;
+                            }
+                            var query = (new URLSearchParams(window.location.search)).get('search');
+                            if(query) {
+                                doSearchQuery(query);
+                            }
+                        </script>
+                        <hr>
+                    </section>
